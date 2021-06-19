@@ -6,9 +6,9 @@ Powered by NodeJS, MongoDB, GraphQL
 
 ## Local testing the node app
 
-- npm run test --> to run the test with mocha framework
-- npm run dev --> to run nodemon for development
-- npm run prod --> to run node in production
+- `npm run test` --> to run the test with mocha framework
+- `npm run dev` --> to run nodemon for development
+- `npm run prod` --> to run node in production
 
 ## Docker for development and production
 
