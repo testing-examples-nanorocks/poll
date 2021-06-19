@@ -2,24 +2,22 @@ version: '3'
 services:
   node-poll:
     restart: "always"
-    image: "nanorocks/node-poll"
-    # build: "./"
+    build: "./"
     ports:
       - "5000:5000"
     volumes:
-      - ./../app:/usr/src/app
+      - "./../app:/usr/src/app"
     links:
-        - mongo-poll  
+        - "mongo-poll"  
   mongo-poll:
     image: "mongo"
     ports:
-      - 27017:27017
+      - "27017:27017"
     volumes:
-      - mongodb:/data/db
+      - "mongodb:/data/db"
 volumes:
  mongodb:
-
-#  docker build -t nanorocks/node-poll -f docker/Dockerfile .    
-#  docker-compose -f docker/docker-compose.yml up -d
+  
+#  docker-compose -f docker/docker-compose.yml up -d --build
 #  docker-compose -f docker/docker-compose.yml down
 #  docker-compose -f docker/docker-compose.yml logs
